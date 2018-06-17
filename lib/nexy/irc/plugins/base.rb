@@ -7,7 +7,7 @@ module Nexy::Irc
     # Common behaviors defined
     # here.
     class Base
-      include Cinch::Plugin
+
     end
   end
 end
