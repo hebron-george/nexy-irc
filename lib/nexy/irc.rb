@@ -6,6 +6,7 @@ require 'nexy/irc/plugins/wiki'
 require 'nexy/irc/plugins/add_quote'
 require 'nexy/irc/plugins/quote'
 require 'nexy/irc/plugins/rand'
+require 'nexy/irc/plugins/search'
 
 module Nexy
   module Irc
@@ -28,6 +29,7 @@ module Nexy
                                  Nexy::Irc::Plugins::AddQuote,
                                  Nexy::Irc::Plugins::Quote,
                                  Nexy::Irc::Plugins::Rand,
+                                 Nexy::Irc::Plugins::Search,
                                 ] # TODO: Use get_plugins here instead
             # c.ssl.use  = true
           end

@@ -39,4 +39,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'cinch'
   spec.add_dependency 'crypt'
   spec.add_dependency 'wikipedia-client'
+  spec.add_dependency 'duckduckgo'
 end
