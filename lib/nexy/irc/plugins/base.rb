@@ -10,7 +10,7 @@ module Nexy::Irc
       # command and returns an array of the remaining
       # arguments.
       #
-      # e.g. my_plugin.get_arguments("!wiki gob bluth")
+      # e.g. my_plugin.arguments("!wiki gob bluth")
       #   # => ["gob", "bluth"]
       #
       # If the message doesn't have any arguments,
