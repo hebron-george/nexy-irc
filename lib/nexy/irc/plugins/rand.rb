@@ -24,7 +24,8 @@ module Nexy::Irc::Plugins
     # e.g. !rand a b c
     #   # => c
     def choose_from_things(array_of_items)
-      # Put your logic here
+
+      array_of_items.sample
     end
   end
 end
