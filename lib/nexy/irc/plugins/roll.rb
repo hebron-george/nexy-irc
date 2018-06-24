@@ -9,7 +9,7 @@ module Nexy::Irc::Plugins
     # Chooses a random number between 1 and 100
     match /roll/
     def execute(m)
-      rolled_number = roll()
+      rolled_number = roll
 
       m.reply("You rolled #{rolled_number}", true)
     end
