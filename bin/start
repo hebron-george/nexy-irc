@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "nexy/irc"
+
+Nexy::Irc::Bot.new.start
