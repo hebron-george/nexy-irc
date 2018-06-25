@@ -1,7 +1,14 @@
 # Nexy::Irc
 Just a thing doing a thing.
 
+## Getting Started
+You can start the bot with the following command:
+```shell
+bin/start
+```
+
 ## Development -- Getting Started
+You can start the bot in a console with the following:
 
 ```shell
 git clone git@github.com:hebron-george/nexy-irc.git
