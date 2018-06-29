@@ -40,4 +40,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'crypt'
   spec.add_dependency 'wikipedia-client'
   spec.add_dependency 'duckduckgo'
+
+  spec.add_dependency 'activerecord'
+  spec.add_dependency 'standalone_migrations'
+  spec.add_dependency 'sqlite3', '~> 1.3', '>= 1.3.11'
 end
