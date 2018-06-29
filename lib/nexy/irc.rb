@@ -14,6 +14,9 @@ module Nexy
     class Bot
       def initialize
         puts 'Creating a new bot'
+        require_relative '../../config/initializers/database'
+
+        Nexy::Irc::Initialize::Database.set_up
       end
 
       def start

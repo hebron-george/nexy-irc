@@ -6,7 +6,11 @@ module Nexy::Irc::Plugins
 
     match 'quote'
     def execute(m)
-      m.reply "Will search for a random quote here"
+      offset = rand(::Quote.count)
+
+      random_quote = ::Quote.offset(offset).first
+
+      m.reply random_quote.quote
     end
   end
 end
