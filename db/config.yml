@@ -13,3 +13,5 @@ test: &test
   database: nexy_irc_test
 
 production:
+  <<: *default
+  database: nexy_irc_production

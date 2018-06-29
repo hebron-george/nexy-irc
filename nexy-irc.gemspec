@@ -44,4 +44,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'activerecord'
   spec.add_dependency 'standalone_migrations'
   spec.add_dependency 'sqlite3', '~> 1.3', '>= 1.3.11'
+
+  spec.add_dependency 'require_all'
 end
