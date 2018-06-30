@@ -28,6 +28,28 @@ module Nexy::Irc
 
         arguments
       end
+
+      # Formats a string to look like an error message
+      # i.e. bolds and colors the string red.
+      def error_message(message)
+        Format(:red, bold_message(message))
+      end
+
+      # Formats a string to look like a success message
+      # i.e. bolds and colors the string green
+      def success_message(message)
+        Format(:green, bold_message(message))
+      end
+
+      # Formats a string to be underlined
+      def underline_message(message)
+        Format(:underline, message)
+      end
+
+      # Formats a string to be bolded
+      def bold_message(message)
+        Format(:bold, message)
+      end
     end
   end
 end
