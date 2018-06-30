@@ -28,8 +28,8 @@ module Nexy::Irc::Plugins
     end
 
     def display_help(m)
-      m.reply 'Correct format:'
-      m.reply '!wiki <search term>'
+      m.reply error_message('Enter a search term, for example:')
+      m.reply "!wiki #{fun_search_term}"
     end
 
     def search_wikipedia(search_term, m)
@@ -46,6 +46,22 @@ module Nexy::Irc::Plugins
       return if page.summary.nil?
 
       page.summary[0...300] + '...'
+    end
+
+    def fun_search_term
+      [
+          'Special Theory of Relativity',
+          'Isaac Asimov',
+          'Carl Sagan',
+          'Mohanlal',
+          'Synthwave',
+          'Heligoland',
+          'Indian Tea Culture',
+          'The Theory and Practice of Oligarchical Collectivism',
+          'Albus Dumbeldore',
+          'Sea Turtle',
+          ''
+      ].sample
     end
   end
 end
