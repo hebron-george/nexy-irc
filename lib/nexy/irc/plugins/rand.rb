@@ -13,7 +13,7 @@ module Nexy::Irc::Plugins
 
       chosen_thing = choose_from_things(things_to_choose_from)
 
-      m.reply "Result: #{chosen_thing}"
+      m.reply success_message('Result: ') + chosen_thing
     end
 
     private

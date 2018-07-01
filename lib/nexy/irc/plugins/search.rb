@@ -15,9 +15,9 @@ module Nexy::Irc::Plugins
       result = results.first
 
       link = get_url(result.uri)
-      link = debug('link: ' + link) && 'URL is too long to paste' if link.length + result.title.length > 435
+      link = error_message('URL is too long to paste') if link.length + result.title.length > 435
 
-      m.reply "#{result.title}|#{link}"
+      m.reply "#{result.title} | #{underline(link)}"
     end
 
     private
