@@ -60,7 +60,6 @@ module Nexy::Irc::Plugins
           'The Theory and Practice of Oligarchical Collectivism',
           'Albus Dumbeldore',
           'Sea Turtle',
-          ''
       ].sample
     end
   end
