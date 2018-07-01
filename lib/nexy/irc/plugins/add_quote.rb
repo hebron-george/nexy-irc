@@ -11,7 +11,7 @@ module Nexy::Irc::Plugins
       new_quote = ::Quote.new(quote: quote)
       new_quote.save!
 
-      m.reply 'Added new quote!'
+      m.reply success_message 'Added new quote!'
     end
   end
 end

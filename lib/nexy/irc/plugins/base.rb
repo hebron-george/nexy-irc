@@ -45,11 +45,13 @@ module Nexy::Irc
       def underline_message(message)
         Format(:underline, message)
       end
+      alias_method :underline, :underline_message
 
       # Formats a string to be bolded
       def bold_message(message)
         Format(:bold, message)
       end
+      alias_method :bold, :bold_message
     end
   end
 end
