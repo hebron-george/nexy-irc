@@ -1,0 +1,10 @@
+---
+server: 'your.server.net'
+port: '1234'
+channels:
+  - '#channel1'
+  - '#channel2'
+nick: 'your_nickname'
+realname: 'your_realname'
+user: 'your_username'
+ssl: 'true OR false'
