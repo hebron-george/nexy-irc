@@ -52,10 +52,16 @@ module Nexy
       end
 
       def get_plugins
-        plugin_names = Nexy::Irc::Plugins.constants - [:Base] # Ignore the base plugin class
-        base        = 'Nexy::Irc::Plugins::'
+        standard_plugin_names   = Nexy::Irc::Plugins.constants - [:Base, :Privileged] # Ignore the base plugin class
+        privileged_plugin_names = Nexy::Irc::Plugins::Privileged.constants - [:Base]
 
-        plugin_names.map { |plugin| (base + plugin.to_s).constantize }
+        standard_base           = 'Nexy::Irc::Plugins::'
+        privileged_base         = 'Nexy::Irc::Plugins::Privileged::'
+
+        standard_plugins   = standard_plugin_names.map { |plugin| (standard_base + plugin.to_s).constantize }
+        privileged_plugins = privileged_plugin_names.map { |plugin| (privileged_base + plugin.to_s).constantize }
+
+        standard_plugins + privileged_plugins
       end
     end
   end
