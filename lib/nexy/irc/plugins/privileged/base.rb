@@ -19,8 +19,24 @@ module Nexy::Irc::Plugins::Privileged
     end
 
     def authorized_user?(user)
-      # require 'pry'; binding.pry
+      # u = User.where(auth_name: user.authname).first
+      # return if u.nil?
+      #
+      # level = u.user_level.level.to_sym
+      # user_level >= user_level_mapping[level]
       user.authname && user.authname.to_s == 'test_auth_name'
+    end
+
+    private
+
+    def user_level_mapping
+      {
+        admin:  9999,
+        high:   10,
+        medium: 8,
+        low:    6,
+        anyone: 1
+      }
     end
   end
 end
