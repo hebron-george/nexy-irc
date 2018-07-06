@@ -13,7 +13,7 @@ You can start the bot in a console with the following:
 ```shell
 git clone git@github.com:hebron-george/nexy-irc.git
 cd nexy-irc/
-bundle install
+bin/setup # sets up everything for you
 
 # To run it locally in a console:
 bin/console  
