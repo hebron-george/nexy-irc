@@ -6,3 +6,15 @@ set -vx
 bundle install
 
 # Do any other automated setup that you need to do here
+
+# Drop DB to create it fresh
+bundle exec rake db:drop
+
+# Create Databases
+bundle exec rake db:create
+
+# Run Migrations
+bundle exec rake db:migrate
+
+# Seed Database
+bundle exec rake db:seed

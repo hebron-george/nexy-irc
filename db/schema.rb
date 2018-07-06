@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_29_050318) do
+ActiveRecord::Schema.define(version: 2018_07_03_233612) do
 
   create_table "quotes", force: :cascade do |t|
     t.string "quote", null: false
@@ -22,6 +22,22 @@ ActiveRecord::Schema.define(version: 2018_06_29_050318) do
     t.string "box"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_levels", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "level", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "auth_name"
+    t.string "host_mask"
+    t.integer "user_level_id", default: 5
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_level_id"], name: "index_users_on_user_level_id"
   end
 
 end

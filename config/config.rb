@@ -1,15 +1,23 @@
 require 'yaml'
 
 module Nexy::Irc::Config
-  def self.bot
+  def self.bot_config
     # Default values
     {
-
-    }.merge(bot_config_file)
+      server:   'irc.freenode.net',
+      port:     '6667',
+      ssl:      false,
+      channels: ['#nexy'],
+      user:     'nexy',
+      nick:     'nexy',
+      realname: 'nexy',
+    }.merge(YAML.load(bot_config_from_file)).with_indifferent_access
   end
 
-  def self.bot_config_file
+  def self.bot_config_from_file
     file_path = File.join(__dir__, 'bot.yml')
-    return {} unless File.file?(file_path)
+    return '{}' unless File.file?(file_path)
+
+    File.open(file_path).read
   end
 end
