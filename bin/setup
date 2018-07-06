@@ -10,6 +10,9 @@ bundle install
 # Drop DB to create it fresh
 bundle exec rake db:drop
 
+# Create Databases
+bundle exec rake db:create
+
 # Run Migrations
 bundle exec rake db:migrate
 
