@@ -12,5 +12,9 @@ module Nexy::Irc::Plugins::Privileged
         m.reply error_message("#{m.user} cannot use this command!")
       end
     end
+
+    def required_user_level
+      :anyone
+    end
   end
 end
