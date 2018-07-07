@@ -19,7 +19,7 @@ module Nexy::Irc::Plugins::Privileged
     end
 
     def required_user_level
-      :anyone
+      :admin
     end
 
     private
