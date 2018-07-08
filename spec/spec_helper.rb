@@ -1,5 +1,6 @@
-require "bundler/setup"
-require "nexy/irc"
+require 'bundler/setup'
+require 'nexy/irc'
+require 'cinch/test'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
