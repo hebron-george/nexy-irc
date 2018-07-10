@@ -1,6 +1,12 @@
 require 'openssl'
 require 'crypt/blowfish'
 
+# This module is WIP and broken
+# use at your own risk.
+#
+# Feel free to open up a PR if you can
+# get it working with fishlim in Hexchat
+
 module Blowfish
   def self.blowfish_instance
     Crypt::Blowfish.new("testkey")
