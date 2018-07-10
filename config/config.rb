@@ -1,4 +1,5 @@
 require 'yaml'
+require 'active_support/core_ext/hash/indifferent_access'
 
 module Nexy::Irc::Config
   def self.bot_config

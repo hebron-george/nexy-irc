@@ -1,5 +1,10 @@
-require "bundler/setup"
-require "nexy/irc"
+require 'bundler/setup'
+require 'nexy/irc'
+require 'cinch/test'
+require_relative '../config/initializers/database'
+
+ENV['environment'] = 'test'
+Nexy::Irc::Initialize::Database.set_up
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

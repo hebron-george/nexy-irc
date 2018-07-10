@@ -7,7 +7,7 @@ module Nexy::Irc::Plugins::Privileged
     match 'test'
     def execute(m)
       if authorized_user?(m.user)
-        m.reply success_message("#{m.user} can use this commend!")
+        m.reply success_message("#{m.user} can use this command!")
       else
         m.reply error_message("#{m.user} cannot use this command!")
       end

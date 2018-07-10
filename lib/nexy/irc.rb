@@ -2,6 +2,7 @@ require "nexy/irc/version"
 require 'cinch'
 require 'require_all'
 require 'nexy/irc/plugins'
+require 'active_support/inflector' # for constantize-ing plugins
 
 module Nexy
   module Irc
@@ -11,7 +12,7 @@ module Nexy
       def initialize
         puts 'Creating a new bot'
         @bot_config = bot_config
-        @bot = create_bot
+        @bot        = create_bot
       end
 
       def start
@@ -33,10 +34,6 @@ module Nexy
             c.realname = config[:realname]
             c.user     = config[:user]
             c.plugins.plugins = plugins
-          end
-
-          on :message, "hello" do |m|
-            m.reply "Hello, World"
           end
         end
       end

@@ -11,3 +11,9 @@
 .rspec_status
 .idea
 config/bot.yml
+
+# Ignore databases
+nexy_irc_development
+nexy_irc_test
+nexy_irc_production
+
