@@ -32,7 +32,6 @@ module Blowfish
   end
 
   def self.new_decrypt(data)
-    binding.pry
     blowfish_instance.decrypt_string(data)
   end
 end
