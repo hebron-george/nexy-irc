@@ -6,7 +6,12 @@ module Nexy::Irc::Plugins
 
     match 'help'
     def execute(m)
-      m.reply "A help message will go here"
+      standard_plugin_names   = Nexy::Irc::Plugins.constants - [:Base, :Privileged]
+      names = standard_plugin_names.map { |name|
+        "!" + name.to_s
+      }
+
+      m.reply "Available commands: " + names.join(', ')
     end
   end
 end
