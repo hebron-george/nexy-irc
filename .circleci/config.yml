@@ -7,4 +7,5 @@ jobs:
       - checkout
       - run: gem install bundler
       - run: bundle install --jobs=3
+      - run: bin/setup
       - run: bundle exec rspec
