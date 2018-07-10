@@ -8,4 +8,5 @@ jobs:
       - run: gem install bundler
       - run: bundle install --jobs=3
       - run: bin/setup
+      - run: rake db:schema:load # for some reason the migrations aren't enough...
       - run: bundle exec rspec
