@@ -2,6 +2,23 @@
 Just a thing doing a thing.
 
 ## Getting Started
+```shell
+# If you want to use custom configurations
+# create a config file for yourself by 
+# copying the template that's provided
+cp config/bot.yml.template config/bot.yml
+
+# Open the `config/bot.yml` in a text editor
+# and you can set the following custom values:
+#   - server # What server to connect to e.g. irc.freenode.net
+#   - port   # What port to use e.g. 6667
+#   - channels # The channels you want the bot to join when it starts
+#   - nick   # Bot nickname to the network
+#   - realname # Bot real name to the network
+#   - user   # Bot username to the network
+#   - ssl    # true or false, to connect to the server using SSL
+```
+
 You can start the bot with the following command:
 ```shell
 bin/start
