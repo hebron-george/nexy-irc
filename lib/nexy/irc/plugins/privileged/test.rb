@@ -6,6 +6,7 @@ module Nexy::Irc::Plugins::Privileged
 
     match 'test'
     def execute(m)
+      binding.pry
       if authorized_user?(m.user)
         m.reply success_message("#{m.user} can use this command!")
       else
